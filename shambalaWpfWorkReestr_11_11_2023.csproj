@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModel.cs" />
+    <Compile Remove="ViewModelRealiz.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="IMG_20230909_115732.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="IMG_20230909_115732.jpg" />
+  </ItemGroup>
+
+</Project>
