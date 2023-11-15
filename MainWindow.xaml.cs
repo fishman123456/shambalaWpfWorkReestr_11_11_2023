@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Threading;
+using System.Timers;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -9,16 +11,16 @@ namespace shambalaWpfWorkReestr_11_11_2023
     /// </summary>
     public partial class MainWindow : Window
     {
+        userTimer timer = new userTimer();
         //public string userwin;
         public MainWindow()
-        {
+        { 
             InitializeComponent();
+            userTimer.TimeUser();
         }
 
         private void GenRand_Click(object sender, RoutedEventArgs e)
         {
-            Timer usertime = new Timer();
-            usertimer.Text = usertime.UserTimer();
             userreestr.Text = proverka.IsExecutingBefore("IS_EXECUTING_BEFORE_KEY","yes" ).ToString();
             randomNumbers randomNumbers = new randomNumbers();
             RandomNumber.Text = randomNumbers.getRand(10).ToString();
